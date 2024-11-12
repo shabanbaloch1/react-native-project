@@ -4,12 +4,12 @@ import {
   StyleSheet,
   Image,
   Button,
+  TextInput,
   TouchableOpacity,
 } from "react-native";
 import { useFonts } from "expo-font";
 import React from "react";
 import styles from "./design";
-import { TextInput } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function index() {
@@ -22,18 +22,28 @@ export default function index() {
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.container}>
-          <Image
-            style={styles.img1}
-            source={require("../../assets/images/new.png")}/>
+        <Image
+          style={styles.img1}
+          source={require("../../assets/images/new.png")}
+        />
 
-            <View style={styles.img2}>
-            <Image
-            source={require("../../assets/images/text.png")}/>
-            </View>
-
-        <TouchableOpacity style={styles.btn}>
+        <View style={styles.img2}>
+          <Image source={require("../../assets/images/text.png")} />
+        </View>
+        <View
+          style={{ justifyContent: "center", flex: 1, alignItems: "center" }}
+        >
+          <TextInput
+            placeholder="Phone Number"
+            placeholderTextColor={"white"}
+            style={styles.textinput}
+            maxLength={11}
+            keyboardType="name-phone-pad"
+          />
+        </View>
+        {/* <TouchableOpacity style={styles.btn}>
           <Text style={styles.txtbtn}>Get Started</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </SafeAreaView>
   );

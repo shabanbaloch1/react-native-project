@@ -6,11 +6,11 @@ export default StyleSheet.create({
   },
   img1: {
     height: 444,
-    width: "100%",  
+    width: "100%",
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
   },
-  img2:{
+  img2: {
     alignItems: "center",
     padding: 50,
   },
@@ -33,5 +33,12 @@ export default StyleSheet.create({
   safe: {
     backgroundColor: "#85CBED",
     flex: 1,
+  },
+  textinput: {
+    width: 200,
+    height: 50,
+    backgroundColor: "green",
+    borderRadius: 10,
+    textAlign: "center",
   },
 });
